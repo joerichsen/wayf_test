@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/onelogin/ruby-saml.git
+  revision: 9eab54601551e9c7f28a8bef7f58c5de7587266f
+  specs:
+    ruby-saml (0.8.1)
+      nokogiri (>= 1.5.0)
+      uuid (~> 2.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -47,12 +55,17 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
+    macaddr (1.7.1)
+      systemu (~> 2.6.2)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
+    mini_portile (0.6.0)
     minitest (5.3.4)
     multi_json (1.10.1)
+    nokogiri (1.6.2.1)
+      mini_portile (= 0.6.0)
     pg (0.17.1)
     polyglot (0.3.5)
     rack (1.5.2)
@@ -100,6 +113,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    systemu (2.6.4)
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
@@ -113,6 +127,8 @@ GEM
     uglifier (2.5.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    uuid (2.3.7)
+      macaddr (~> 1.0)
 
 PLATFORMS
   ruby
@@ -124,6 +140,7 @@ DEPENDENCIES
   pg
   rails (= 4.1.1)
   rails_12factor
+  ruby-saml!
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   spring
