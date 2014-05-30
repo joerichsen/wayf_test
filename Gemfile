@@ -38,7 +38,8 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'rails_12factor', group: :production
-gem 'ruby-saml', github: 'onelogin/ruby-saml'
+#gem 'ruby-saml', github: 'onelogin/ruby-saml'
+gem 'ruby-saml', github: 'CompendiumSoftware/ruby-saml'
 gem 'awesome_print'
 
 ruby "2.1.1"

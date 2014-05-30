@@ -1,0 +1,2 @@
+openssl req -newkey rsa:2048 -new -x509 -days 3652 -nodes -out saml.crt -keyout saml.pem
+openssl x509 -in saml.crt -out public.pem -outform PEM
