@@ -33,9 +33,11 @@ class SamlController < ApplicationController
 
     # Signing stuff
     settings.sign_request = true
-    raw = File.read "#{Rails.root}/config/certs/public.pem"
+    
+    raw = File.read "#{Rails.root}/config/certs/server.crt"
     settings.certificate = OpenSSL::X509::Certificate.new raw
-    raw = File.read "#{Rails.root}/config/certs/saml.pem"
+
+    raw = File.read "#{Rails.root}/config/certs/server.key"
     settings.private_key = OpenSSL::PKey::RSA.new raw
 
     settings
