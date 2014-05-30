@@ -1,3 +1,2 @@
-openssl genrsa -out server.key 1024
-openssl req \-new \-key server.key \-out server.csr
-openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
+openssl req -newkey rsa:2048 -new -x509 -days 3652 -nodes -out saml.crt -keyout saml.pem
+openssl x509 -in saml.crt -out public.pem -outform PEM
