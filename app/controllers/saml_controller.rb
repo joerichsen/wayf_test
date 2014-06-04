@@ -7,7 +7,7 @@ class SamlController < ApplicationController
   end
 
   def consume
-    Rails.logger.ap request.create(saml_settings)
+    Rails.logger.ap params
 
     response          = OneLogin::RubySaml::Response.new(params[:SAMLResponse])
     response.settings = saml_settings
