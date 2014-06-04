@@ -2,6 +2,7 @@ class SamlController < ApplicationController
 
   def init
     request = OneLogin::RubySaml::Authrequest.new
+    Rails.logger.ap saml_settings
     Rails.logger.ap request.create(saml_settings)
     redirect_to(request.create(saml_settings))
   end
