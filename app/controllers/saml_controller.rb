@@ -26,10 +26,9 @@ class SamlController < ApplicationController
     settings = OneLogin::RubySaml::Settings.new
 
     settings.assertion_consumer_service_url     = "http://#{request.host}/saml/consume"
+    settings.assertion_consumer_service_binding = "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
     settings.issuer                             = request.protocol + request.host
     settings.protocol_binding                   = "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
-    settings.assertion_consumer_service_binding = "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
-    settings.assertion_consumer_logout_service_binding = "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
     settings.idp_sso_target_url                 = "https://testbridge.wayf.dk/saml2/idp/SSOService.php"
     settings.idp_cert_fingerprint               = 'MIIExTCCA62gAwIBAgIDBgNbMA0GCSqGSIb3DQEBBQUAMDwxCzAJBgNVBAYTAlVTMRcwFQYDVQQKEw5HZW9UcnVzdCwgSW5jLjEUMBIGA1UEAxMLUmFwaWRTU0wgQ0EwHhcNMTIwNDA5MTMwMDA5WhcNMTcwNDEyMDAyNjQ3WjCB2TEpMCcGA1UEBRMgWWhjbmk0MDM2VTJHSkJPc1Jrems0NWp1dnRIUnpweW8xCzAJBgNVBAYTAkRLMRIwEAYDVQQKDAkqLndheWYuZGsxEzARBgNVBAsTCkdUMjE2NTU2MTcxMTAvBgNVBAsTKFNlZSB3d3cucmFwaWRzc2wuY29tL3Jlc291cmNlcy9jcHMgKGMpMTIxLzAtBgNVBAsTJkRvbWFpbiBDb250cm9sIFZhbGlkYXRlZCAtIFJhcGlkU1NMKFIpMRIwEAYDVQQDDAkqLndheWYuZGswggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCp6ny1k1GJrtfvDPWko'
     settings.name_identifier_format             = "urn:oasis:names:tc:SAML:2.0:nameid-format:transient"
