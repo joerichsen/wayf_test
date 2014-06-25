@@ -39,7 +39,7 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 gem 'rails_12factor', group: :production
 #gem 'ruby-saml', github: 'onelogin/ruby-saml'
-gem 'ruby-saml', github: 'CompendiumSoftware/ruby-saml'
+gem 'ruby-saml', github: 'joerichsen/ruby-saml', branch: 'signed-requests'
 gem 'awesome_print'
 
 ruby "2.1.1"

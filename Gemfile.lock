@@ -1,8 +1,9 @@
 GIT
-  remote: git://github.com/CompendiumSoftware/ruby-saml.git
-  revision: a6b899d1e152c7f481fa4c44c7c0ff600d1d036e
+  remote: git://github.com/joerichsen/ruby-saml.git
+  revision: b909c823ca03053872191bcd8647fba8f6f1fc71
+  branch: signed-requests
   specs:
-    ruby-saml (0.9.0)
+    ruby-saml (0.8.1)
       nokogiri (>= 1.5.0)
       uuid (~> 2.3)
 
