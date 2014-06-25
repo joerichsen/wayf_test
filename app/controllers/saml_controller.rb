@@ -26,6 +26,7 @@ class SamlController < ApplicationController
     settings = OneLogin::RubySaml::Settings.new
 
     settings.assertion_consumer_service_url     = "http://#{request.host}/saml/consume"
+    settings.assertion_consumer_service_binding = "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
     settings.issuer                             = request.protocol + request.host
     settings.protocol_binding                   = "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
     settings.idp_sso_target_url                 = "https://testbridge.wayf.dk/saml2/idp/SSOService.php"
